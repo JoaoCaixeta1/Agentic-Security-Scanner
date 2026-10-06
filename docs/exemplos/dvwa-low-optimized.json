@@ -1,0 +1,1014 @@
+{
+  "schema_version": "1.0",
+  "scanner": {
+    "name": "Agentic Security Scanner",
+    "version": "1.0.0"
+  },
+  "target": "http://127.0.0.1:4280/",
+  "status": "completed",
+  "started_at": "2026-10-02T17:37:28.920393+00:00",
+  "finished_at": "2026-10-02T17:38:34.050543+00:00",
+  "authentication": "verified",
+  "coverage": {
+    "pages": 56,
+    "discovered_urls": 55,
+    "remaining_queue": 0,
+    "target_requests": 390,
+    "target_bytes": 2006681,
+    "depth_skipped": 0,
+    "protected_references": 25,
+    "limits": {
+      "pages": 100,
+      "requests": 600,
+      "depth": 5,
+      "seconds": 300,
+      "bytes_per_response": 1048576
+    },
+    "javascript_executed": false
+  },
+  "ai": {
+    "model": "qwen2.5:3b",
+    "available": true,
+    "calls": 3,
+    "valid_decisions": 3,
+    "tokens": 1819,
+    "mode": "local_ollama"
+  },
+  "checks": {
+    "cpf_exposure": {
+      "tested": 55,
+      "confirmed": 0,
+      "negative": 55,
+      "inconclusive": 0,
+      "skipped": 0,
+      "reasons": {
+        "no_contextual_valid_cpf": 55
+      },
+      "details": [
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/login.php",
+          "request_id": "http-2",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/index.php",
+          "request_id": "http-4",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/",
+          "request_id": "http-5",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/index.php",
+          "request_id": "http-6",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/instructions.php",
+          "request_id": "http-7",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/setup.php",
+          "request_id": "http-8",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/brute/",
+          "request_id": "http-9",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/exec/",
+          "request_id": "http-10",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/csrf/",
+          "request_id": "http-11",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/fi/?page=%5BREDACTED%5D",
+          "request_id": "http-12",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/upload/",
+          "request_id": "http-13",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/captcha/",
+          "request_id": "http-14",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/sqli/",
+          "request_id": "http-15",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/sqli_blind/",
+          "request_id": "http-16",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/weak_id/",
+          "request_id": "http-17",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/xss_d/",
+          "request_id": "http-18",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/xss_r/",
+          "request_id": "http-19",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/xss_s/",
+          "request_id": "http-20",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/csp/",
+          "request_id": "http-21",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/javascript/",
+          "request_id": "http-22",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/authbypass/",
+          "request_id": "http-23",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/open_redirect/",
+          "request_id": "http-24",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/cryptography/",
+          "request_id": "http-25",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/api/",
+          "request_id": "http-26",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/security.php",
+          "request_id": "http-27",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/phpinfo.php",
+          "request_id": "http-28",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/about.php",
+          "request_id": "http-29",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/dvwa/js/dvwaPage.js",
+          "request_id": "http-30",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/dvwa/js/add_event_listeners.js",
+          "request_id": "http-31",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/instructions.php?doc=%5BREDACTED%5D",
+          "request_id": "http-32",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/instructions.php?doc=%5BREDACTED%5D",
+          "request_id": "http-33",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/instructions.php?doc=%5BREDACTED%5D",
+          "request_id": "http-34",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/instructions.php?doc=%5BREDACTED%5D",
+          "request_id": "http-35",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/README.ar.md",
+          "request_id": "http-36",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/README.zh.md",
+          "request_id": "http-37",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/README.fr.md",
+          "request_id": "http-38",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/README.ko.md",
+          "request_id": "http-39",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/README.fa.md",
+          "request_id": "http-40",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/README.pl.md",
+          "request_id": "http-41",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/README.pt.md",
+          "request_id": "http-42",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/README.es.md",
+          "request_id": "http-43",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/README.tr.md",
+          "request_id": "http-44",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/README.id.md",
+          "request_id": "http-45",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/README.vi.md",
+          "request_id": "http-46",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/README.it.md",
+          "request_id": "http-47",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/README.uk.md",
+          "request_id": "http-48",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/README.ru.md",
+          "request_id": "http-49",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/compose.yml",
+          "request_id": "http-51",
+          "status": 404
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/fi/?page=%5BREDACTED%5D",
+          "request_id": "http-52",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/fi/?page=%5BREDACTED%5D",
+          "request_id": "http-53",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/fi/?page=%5BREDACTED%5D",
+          "request_id": "http-54",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/authbypass/authbypass.js",
+          "request_id": "http-55",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/open_redirect/source/info.php?id=%5BREDACTED%5D",
+          "request_id": "http-57",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/open_redirect/source/info.php?id=%5BREDACTED%5D",
+          "request_id": "http-59",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4280/vulnerabilities/bac/log_viewer.php",
+          "request_id": "http-60",
+          "status": 200
+        }
+      ]
+    },
+    "http_method_tampering": {
+      "tested": 25,
+      "confirmed": 0,
+      "negative": 25,
+      "inconclusive": 0,
+      "skipped": 0,
+      "reasons": {
+        "post_did_not_bypass_access_control": 25
+      },
+      "details": [
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/",
+          "request_id": "http-64",
+          "status": 200,
+          "probe_ids": [
+            "http-68",
+            "http-70"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-72"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/index.php",
+          "request_id": "http-75",
+          "status": 200,
+          "probe_ids": [
+            "http-79",
+            "http-81"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-83"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/brute/",
+          "request_id": "http-90",
+          "status": 200,
+          "probe_ids": [
+            "http-94",
+            "http-96"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-98"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/exec/",
+          "request_id": "http-101",
+          "status": 200,
+          "probe_ids": [
+            "http-105",
+            "http-107"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-109"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/csrf/",
+          "request_id": "http-112",
+          "status": 200,
+          "probe_ids": [
+            "http-116",
+            "http-118"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-120"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/fi/?page=%5BREDACTED%5D",
+          "request_id": "http-123",
+          "status": 200,
+          "probe_ids": [
+            "http-127",
+            "http-129"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-131"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/upload/",
+          "request_id": "http-134",
+          "status": 200,
+          "probe_ids": [
+            "http-138",
+            "http-140"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-142"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/captcha/",
+          "request_id": "http-145",
+          "status": 200,
+          "probe_ids": [
+            "http-149",
+            "http-151"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-153"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/sqli/",
+          "request_id": "http-156",
+          "status": 200,
+          "probe_ids": [
+            "http-160",
+            "http-162"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-164"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/sqli_blind/",
+          "request_id": "http-167",
+          "status": 200,
+          "probe_ids": [
+            "http-171",
+            "http-173"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-175"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/weak_id/",
+          "request_id": "http-178",
+          "status": 200,
+          "probe_ids": [
+            "http-182",
+            "http-184"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-186"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/xss_d/",
+          "request_id": "http-189",
+          "status": 200,
+          "probe_ids": [
+            "http-193",
+            "http-195"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-197"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/xss_r/",
+          "request_id": "http-200",
+          "status": 200,
+          "probe_ids": [
+            "http-204",
+            "http-206"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-208"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/xss_s/",
+          "request_id": "http-211",
+          "status": 200,
+          "probe_ids": [
+            "http-215",
+            "http-217"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-219"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/csp/",
+          "request_id": "http-222",
+          "status": 200,
+          "probe_ids": [
+            "http-226",
+            "http-228"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-230"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/javascript/",
+          "request_id": "http-233",
+          "status": 200,
+          "probe_ids": [
+            "http-237",
+            "http-239"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-241"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/authbypass/",
+          "request_id": "http-244",
+          "status": 200,
+          "probe_ids": [
+            "http-248",
+            "http-250"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-252"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/open_redirect/",
+          "request_id": "http-255",
+          "status": 200,
+          "probe_ids": [
+            "http-259",
+            "http-261"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-263"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/cryptography/",
+          "request_id": "http-266",
+          "status": 200,
+          "probe_ids": [
+            "http-270",
+            "http-272"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-274"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/api/",
+          "request_id": "http-277",
+          "status": 200,
+          "probe_ids": [
+            "http-281",
+            "http-283"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-285"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/fi/?page=%5BREDACTED%5D",
+          "request_id": "http-304",
+          "status": 200,
+          "probe_ids": [
+            "http-308",
+            "http-310"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-312"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/fi/?page=%5BREDACTED%5D",
+          "request_id": "http-315",
+          "status": 200,
+          "probe_ids": [
+            "http-319",
+            "http-321"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-323"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/fi/?page=%5BREDACTED%5D",
+          "request_id": "http-326",
+          "status": 200,
+          "probe_ids": [
+            "http-330",
+            "http-332"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-334"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/open_redirect/source/info.php?id=%5BREDACTED%5D",
+          "request_id": "http-337",
+          "status": 200,
+          "probe_ids": [
+            "http-341",
+            "http-343"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-345"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:4280/vulnerabilities/open_redirect/source/info.php?id=%5BREDACTED%5D",
+          "request_id": "http-348",
+          "status": 200,
+          "probe_ids": [
+            "http-352",
+            "http-354"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ],
+          "final_control": "http-356"
+        }
+      ]
+    },
+    "session_cookie_flags": {
+      "tested": 2,
+      "confirmed": 1,
+      "negative": 0,
+      "inconclusive": 1,
+      "skipped": 0,
+      "reasons": {
+        "cookie_authentication_role_not_proven": 1
+      },
+      "details": [
+        {
+          "outcome": "inconclusive",
+          "reason": "cookie_authentication_role_not_proven",
+          "url": "http://127.0.0.1:4280/",
+          "request_id": "http-64",
+          "status": 200,
+          "cookie_name": "security"
+        }
+      ]
+    },
+    "session_after_logout": {
+      "tested": 1,
+      "confirmed": 0,
+      "negative": 1,
+      "inconclusive": 0,
+      "skipped": 0,
+      "reasons": {
+        "old_session_rejected_after_logout": 1
+      },
+      "details": [
+        {
+          "outcome": "negative",
+          "reason": "old_session_rejected_after_logout",
+          "url": "http://127.0.0.1:4280/",
+          "request_id": "http-64",
+          "status": 200,
+          "logout_request": "http-382",
+          "probe_ids": [
+            "http-388",
+            "http-390"
+          ],
+          "terminal_statuses": [
+            200,
+            200
+          ]
+        }
+      ]
+    },
+    "open_redirect": {
+      "tested": 6,
+      "confirmed": 1,
+      "negative": 0,
+      "inconclusive": 4,
+      "skipped": 0,
+      "reasons": {
+        "baseline_not_http_redirect": 4
+      },
+      "details": [
+        {
+          "outcome": "inconclusive",
+          "reason": "baseline_not_http_redirect",
+          "url": "http://127.0.0.1:4280/vulnerabilities/fi/?page=%5BREDACTED%5D",
+          "request_id": "http-365",
+          "status": 200
+        },
+        {
+          "outcome": "inconclusive",
+          "reason": "baseline_not_http_redirect",
+          "url": "http://127.0.0.1:4280/vulnerabilities/fi/?page=%5BREDACTED%5D",
+          "request_id": "http-366",
+          "status": 200
+        },
+        {
+          "outcome": "inconclusive",
+          "reason": "baseline_not_http_redirect",
+          "url": "http://127.0.0.1:4280/vulnerabilities/fi/?page=%5BREDACTED%5D",
+          "request_id": "http-367",
+          "status": 200
+        },
+        {
+          "outcome": "inconclusive",
+          "reason": "baseline_not_http_redirect",
+          "url": "http://127.0.0.1:4280/vulnerabilities/fi/?page=%5BREDACTED%5D",
+          "request_id": "http-368",
+          "status": 200
+        }
+      ]
+    }
+  },
+  "findings": [
+    {
+      "id": "092e5c72fce57ffd",
+      "type": "session_cookie_flags",
+      "title": "Cookie necessário à sessão sem flag de segurança",
+      "severity": "medium",
+      "confidence": "high",
+      "url": "http://127.0.0.1:4280/",
+      "method": "GET",
+      "cwe": "CWE-1004",
+      "owasp": "A02:2025",
+      "evidence": {
+        "cookie_name": "PHPSESSID",
+        "cookie_path": "/",
+        "missing_flags": [
+          "HttpOnly"
+        ],
+        "without_cookie_request": "http-358",
+        "without_cookie_status": 200,
+        "restored_request": "http-359",
+        "cookie_alone_request": "http-360",
+        "cookie_value": "omitted"
+      },
+      "impact": "A proteção do cookie de autenticação está incompleta.",
+      "remediation": "Definir HttpOnly e, em HTTPS, Secure no cookie de sessão; avaliar SameSite conforme o fluxo.",
+      "limitations": [
+        "Ausência de HttpOnly não comprova XSS; Secure não é exigido neste teste sobre HTTP local."
+      ]
+    },
+    {
+      "id": "a50d2a6823dd755b",
+      "type": "open_redirect",
+      "title": "Parâmetro controla redirecionamento para origem externa",
+      "severity": "low",
+      "confidence": "medium",
+      "url": "http://127.0.0.1:4280/vulnerabilities/open_redirect/source/[REDACTED].php?redirect=%5BREDACTED%5D",
+      "method": "GET",
+      "cwe": "CWE-601",
+      "owasp": "A01:2025",
+      "evidence": {
+        "parameter": "redirect",
+        "baseline_request": "http-369",
+        "probe_requests": [
+          "http-373",
+          "http-374"
+        ],
+        "external_location_controlled": true,
+        "external_destination_contacted": false
+      },
+      "impact": "O endpoint pode encaminhar o navegador para um destino externo escolhido pelo cliente.",
+      "remediation": "Permitir apenas destinos internos ou uma lista explícita de destinos confiáveis.",
+      "limitations": [
+        "Pode ser um redirecionador externo intencional. A política de destinos exige revisão humana; exploração não foi alegada."
+      ]
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "decisions": [
+    {
+      "source": "ollama",
+      "priority_ids": [],
+      "login_form_id": "form-43f9ce23322a",
+      "accepted_by_policy": true
+    },
+    {
+      "source": "ollama",
+      "priority_ids": [],
+      "login_form_id": null,
+      "accepted_by_policy": true
+    },
+    {
+      "source": "ollama",
+      "priority_ids": [],
+      "login_form_id": null,
+      "accepted_by_policy": true
+    }
+  ]
+}

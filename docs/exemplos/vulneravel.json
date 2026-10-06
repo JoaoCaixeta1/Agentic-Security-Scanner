@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.0",
+  "scanner": {
+    "name": "Agentic Security Scanner",
+    "version": "1.0.0"
+  },
+  "target": "http://127.0.0.1:50739/7465f5f633",
+  "status": "completed",
+  "started_at": "2026-10-02T18:04:53.146819+00:00",
+  "finished_at": "2026-10-02T18:05:28.950792+00:00",
+  "authentication": "verified",
+  "coverage": {
+    "pages": 8,
+    "discovered_urls": 6,
+    "remaining_queue": 0,
+    "target_requests": 40,
+    "target_bytes": 3060,
+    "depth_skipped": 0,
+    "protected_references": 2,
+    "limits": {
+      "pages": 100,
+      "requests": 600,
+      "depth": 5,
+      "seconds": 300,
+      "bytes_per_response": 1048576
+    },
+    "javascript_executed": false
+  },
+  "ai": {
+    "model": "qwen2.5:3b",
+    "available": true,
+    "calls": 3,
+    "valid_decisions": 3,
+    "tokens": 1266,
+    "mode": "local_ollama"
+  },
+  "checks": {
+    "cpf_exposure": {
+      "tested": 8,
+      "confirmed": 1,
+      "negative": 7,
+      "inconclusive": 0,
+      "skipped": 0,
+      "reasons": {
+        "no_contextual_valid_cpf": 7
+      },
+      "details": [
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:50739/7465f5f633",
+          "request_id": "http-1",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:50739/7465f5f633/0774fd70",
+          "request_id": "http-2",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:50739/7465f5f633/9b601dfd",
+          "request_id": "http-4",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:50739/7465f5f633/9b601dfd",
+          "request_id": "http-7",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:50739/7465f5f633",
+          "request_id": "http-9",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:50739/7465f5f633/9b601dfd",
+          "request_id": "http-10",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:50739/7465f5f633/0774fd70",
+          "request_id": "http-11",
+          "status": 200
+        }
+      ]
+    },
+    "http_method_tampering": {
+      "tested": 2,
+      "confirmed": 1,
+      "negative": 1,
+      "inconclusive": 0,
+      "skipped": 0,
+      "reasons": {
+        "post_did_not_bypass_access_control": 1
+      },
+      "details": [
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:50739/7465f5f633/9b601dfd",
+          "request_id": "http-19",
+          "status": 200,
+          "probe_ids": [
+            "http-21",
+            "http-22"
+          ],
+          "terminal_statuses": [
+            401,
+            401
+          ],
+          "final_control": "http-23"
+        }
+      ]
+    },
+    "session_cookie_flags": {
+      "tested": 1,
+      "confirmed": 1,
+      "negative": 0,
+      "inconclusive": 0,
+      "skipped": 0,
+      "reasons": {},
+      "details": []
+    },
+    "session_after_logout": {
+      "tested": 1,
+      "confirmed": 1,
+      "negative": 0,
+      "inconclusive": 0,
+      "skipped": 0,
+      "reasons": {},
+      "details": []
+    },
+    "open_redirect": {
+      "tested": 1,
+      "confirmed": 1,
+      "negative": 0,
+      "inconclusive": 0,
+      "skipped": 0,
+      "reasons": {},
+      "details": []
+    }
+  },
+  "findings": [
+    {
+      "id": "7f09d58c62e12067",
+      "type": "cpf_exposure",
+      "title": "CPF com dígitos verificadores válidos exposto na resposta",
+      "severity": "low",
+      "confidence": "medium",
+      "url": "http://127.0.0.1:50739/7465f5f633/413c19f6",
+      "method": "GET",
+      "cwe": "CWE-200",
+      "owasp": "A01:2025",
+      "evidence": {
+        "request_id": "http-5",
+        "status": 200,
+        "valid_distinct_cpfs": 1,
+        "context": "CPF field/label near checksum-valid value",
+        "access": "authenticated_session",
+        "raw_values": "omitted"
+      },
+      "impact": "A resposta contém identificadores pessoais completos e legíveis.",
+      "remediation": "Minimizar e mascarar CPF; verificar autorização e necessidade de exposição.",
+      "limitations": [
+        "Checksum e contexto não comprovam pessoa real nem acesso indevido. Revisão de regra de negócio é necessária."
+      ]
+    },
+    {
+      "id": "4d5b9386cfa5b322",
+      "type": "http_method_tampering",
+      "title": "Troca de GET por POST contorna controle de acesso",
+      "severity": "high",
+      "confidence": "high",
+      "url": "http://127.0.0.1:50739/7465f5f633/413c19f6",
+      "method": "POST",
+      "cwe": "CWE-650",
+      "owasp": "A01:2025",
+      "evidence": {
+        "authenticated_reference": "http-13",
+        "anonymous_get": [
+          "http-14",
+          "http-17"
+        ],
+        "anonymous_get_status": [
+          403,
+          403
+        ],
+        "anonymous_post": [
+          "http-15",
+          "http-16"
+        ],
+        "anonymous_post_status": [
+          200,
+          200
+        ],
+        "comparison": "exact protected response body and content type; reproduced twice"
+      },
+      "impact": "Cliente sem sessão obtém a mesma resposta protegida ao alterar o método HTTP.",
+      "remediation": "Aplicar autorização antes do despacho por método e negar métodos não previstos.",
+      "limitations": []
+    },
+    {
+      "id": "fe0315b909a3081a",
+      "type": "session_cookie_flags",
+      "title": "Cookie necessário à sessão sem flag de segurança",
+      "severity": "medium",
+      "confidence": "high",
+      "url": "http://127.0.0.1:50739/7465f5f633/413c19f6",
+      "method": "GET",
+      "cwe": "CWE-1004",
+      "owasp": "A02:2025",
+      "evidence": {
+        "cookie_name": "sid",
+        "cookie_path": "/",
+        "missing_flags": [
+          "HttpOnly"
+        ],
+        "without_cookie_request": "http-28",
+        "without_cookie_status": 403,
+        "restored_request": "http-29",
+        "cookie_alone_request": "http-30",
+        "cookie_value": "omitted"
+      },
+      "impact": "A proteção do cookie de autenticação está incompleta.",
+      "remediation": "Definir HttpOnly e, em HTTPS, Secure no cookie de sessão; avaliar SameSite conforme o fluxo.",
+      "limitations": [
+        "Ausência de HttpOnly não comprova XSS; Secure não é exigido neste teste sobre HTTP local."
+      ]
+    },
+    {
+      "id": "e9dc0131d9fc63e4",
+      "type": "open_redirect",
+      "title": "Parâmetro controla redirecionamento para origem externa",
+      "severity": "low",
+      "confidence": "medium",
+      "url": "http://127.0.0.1:50739/7465f5f633/d903e02a?next=%5BREDACTED%5D",
+      "method": "GET",
+      "cwe": "CWE-601",
+      "owasp": "A01:2025",
+      "evidence": {
+        "parameter": "next",
+        "baseline_request": "http-31",
+        "probe_requests": [
+          "http-33",
+          "http-34"
+        ],
+        "external_location_controlled": true,
+        "external_destination_contacted": false
+      },
+      "impact": "O endpoint pode encaminhar o navegador para um destino externo escolhido pelo cliente.",
+      "remediation": "Permitir apenas destinos internos ou uma lista explícita de destinos confiáveis.",
+      "limitations": [
+        "Pode ser um redirecionador externo intencional. A política de destinos exige revisão humana; exploração não foi alegada."
+      ]
+    },
+    {
+      "id": "e4ffc1cc0f0232e7",
+      "type": "session_after_logout",
+      "title": "Sessão anterior continua válida após logout verificado",
+      "severity": "high",
+      "confidence": "high",
+      "url": "http://127.0.0.1:50739/7465f5f633/413c19f6",
+      "method": "GET",
+      "cwe": "CWE-613",
+      "owasp": "A07:2025",
+      "evidence": {
+        "logout_request": "http-36",
+        "current_session_denied": "http-37",
+        "anonymous_denied": "http-38",
+        "old_cookie_requests": [
+          "http-39",
+          "http-40"
+        ],
+        "old_cookie_status": [
+          200,
+          200
+        ],
+        "comparison": "exact protected response body after logout; reproduced twice",
+        "cache_control": "no-cache"
+      },
+      "impact": "Uma cópia anterior do cookie permite reutilizar a sessão após a saída do usuário.",
+      "remediation": "Invalidar a sessão no servidor durante logout; revogar tokens ou limitar sua validade conforme o risco.",
+      "limitations": []
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "decisions": [
+    {
+      "source": "ollama",
+      "priority_ids": [],
+      "login_form_id": null,
+      "accepted_by_policy": true
+    },
+    {
+      "source": "ollama",
+      "priority_ids": [
+        "url-e38a7bfd7ccf",
+        "url-bdda85a45d06",
+        "url-b199de7414b6"
+      ],
+      "login_form_id": "form-388386fa85ac",
+      "accepted_by_policy": true
+    },
+    {
+      "source": "ollama",
+      "priority_ids": [],
+      "login_form_id": null,
+      "accepted_by_policy": true
+    }
+  ]
+}

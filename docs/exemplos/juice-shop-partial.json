@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "scanner": {
+    "name": "Agentic Security Scanner",
+    "version": "1.0.0"
+  },
+  "target": "http://127.0.0.1:4281/",
+  "status": "partial",
+  "started_at": "2026-10-02T17:52:25.061009+00:00",
+  "finished_at": "2026-10-02T17:52:47.158915+00:00",
+  "authentication": "not_attempted",
+  "coverage": {
+    "pages": 4,
+    "discovered_urls": 4,
+    "remaining_queue": 0,
+    "target_requests": 4,
+    "target_bytes": 1272400,
+    "depth_skipped": 0,
+    "protected_references": 0,
+    "limits": {
+      "pages": 100,
+      "requests": 600,
+      "depth": 5,
+      "seconds": 300,
+      "bytes_per_response": 2097152
+    },
+    "javascript_executed": false
+  },
+  "ai": {
+    "model": "qwen2.5:3b",
+    "available": true,
+    "calls": 1,
+    "valid_decisions": 1,
+    "tokens": 306,
+    "mode": "local_ollama"
+  },
+  "checks": {
+    "cpf_exposure": {
+      "tested": 1,
+      "confirmed": 0,
+      "negative": 1,
+      "inconclusive": 0,
+      "skipped": 0,
+      "reasons": {
+        "no_contextual_valid_cpf": 1
+      },
+      "details": [
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4281/",
+          "request_id": "http-1",
+          "status": 200
+        }
+      ]
+    },
+    "http_method_tampering": {
+      "tested": 0,
+      "confirmed": 0,
+      "negative": 0,
+      "inconclusive": 0,
+      "skipped": 1,
+      "reasons": {
+        "no_authenticated_session": 1
+      },
+      "details": [
+        {
+          "outcome": "skipped",
+          "reason": "no_authenticated_session"
+        }
+      ]
+    },
+    "session_cookie_flags": {
+      "tested": 0,
+      "confirmed": 0,
+      "negative": 0,
+      "inconclusive": 0,
+      "skipped": 1,
+      "reasons": {
+        "no_authenticated_session": 1
+      },
+      "details": [
+        {
+          "outcome": "skipped",
+          "reason": "no_authenticated_session"
+        }
+      ]
+    },
+    "session_after_logout": {
+      "tested": 0,
+      "confirmed": 0,
+      "negative": 0,
+      "inconclusive": 0,
+      "skipped": 1,
+      "reasons": {
+        "no_authenticated_session": 1
+      },
+      "details": [
+        {
+          "outcome": "skipped",
+          "reason": "no_authenticated_session"
+        }
+      ]
+    },
+    "open_redirect": {
+      "tested": 0,
+      "confirmed": 0,
+      "negative": 0,
+      "inconclusive": 0,
+      "skipped": 1,
+      "reasons": {
+        "no_supported_destination_parameter": 1
+      },
+      "details": [
+        {
+          "outcome": "skipped",
+          "reason": "no_supported_destination_parameter",
+          "explanation": "No same-origin URL/path parameter discovered; numeric IDs and JavaScript redirects are not probed."
+        }
+      ]
+    }
+  },
+  "findings": [],
+  "errors": [],
+  "warnings": [
+    "Interface dinâmica sem links ou formulários HTML: a descoberta sem JavaScript pode estar incompleta."
+  ],
+  "decisions": [
+    {
+      "source": "ollama",
+      "priority_ids": [],
+      "login_form_id": null,
+      "accepted_by_policy": true
+    }
+  ]
+}

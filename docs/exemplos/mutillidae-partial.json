@@ -1,0 +1,908 @@
+{
+  "schema_version": "1.0",
+  "scanner": {
+    "name": "Agentic Security Scanner",
+    "version": "1.0.0"
+  },
+  "target": "http://127.0.0.1:4282/",
+  "status": "partial",
+  "started_at": "2026-10-02T17:56:59.934582+00:00",
+  "finished_at": "2026-10-02T17:58:54.249444+00:00",
+  "authentication": "session_observed_unverified",
+  "coverage": {
+    "pages": 134,
+    "discovered_urls": 131,
+    "remaining_queue": 0,
+    "target_requests": 191,
+    "target_bytes": 1040539,
+    "depth_skipped": 0,
+    "protected_references": 0,
+    "limits": {
+      "pages": 200,
+      "requests": 1200,
+      "depth": 5,
+      "seconds": 360,
+      "bytes_per_response": 1048576
+    },
+    "javascript_executed": false
+  },
+  "ai": {
+    "model": "qwen2.5:3b",
+    "available": true,
+    "calls": 3,
+    "valid_decisions": 3,
+    "tokens": 2901,
+    "mode": "local_ollama"
+  },
+  "checks": {
+    "cpf_exposure": {
+      "tested": 135,
+      "confirmed": 0,
+      "negative": 135,
+      "inconclusive": 0,
+      "skipped": 0,
+      "reasons": {
+        "no_contextual_valid_cpf": 135
+      },
+      "details": [
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/",
+          "request_id": "http-[REDACTED]",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D&popUpNotificationCode=%5BREDACTED%5D",
+          "request_id": "http-2",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-3",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?popUpNotificationCode=%5BREDACTED%5D",
+          "request_id": "http-5",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?popUpNotificationCode=%5BREDACTED%5D&page=%5BREDACTED%5D",
+          "request_id": "http-7",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?popUpNotificationCode=%5BREDACTED%5D&page=%5BREDACTED%5D",
+          "request_id": "http-9",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?popUpNotificationCode=%5BREDACTED%5D&page=%5BREDACTED%5D",
+          "request_id": "http-11",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/set-up-database.php",
+          "request_id": "http-12",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-13",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-14",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-15",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/?page=%5BREDACTED%5D",
+          "request_id": "http-16",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-17",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-18",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-19",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-20",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-21",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/webservices/soap/ws-user-account.php",
+          "request_id": "http-22",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/webservices/rest/ws-user-account.php",
+          "request_id": "http-23",
+          "status": 400
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-24",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-25",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-26",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-27",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-28",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D&PathToDocument=%5BREDACTED%5D",
+          "request_id": "http-29",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-30",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-31",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-32",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-33",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-34",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-35",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D&iv=%5BREDACTED%5D",
+          "request_id": "http-36",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/webservices/soap/ws-dns-lookup.php",
+          "request_id": "http-37",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D&page-to-frame=%5BREDACTED%5D",
+          "request_id": "http-38",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-39",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-40",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-41",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-42",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-43",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-44",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D&username=%5BREDACTED%5D",
+          "request_id": "http-45",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-46",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-47",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-48",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-49",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-50",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-51",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-52",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-53",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-54",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-55",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-56",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-57",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/framer.html",
+          "request_id": "http-58",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-59",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-60",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-61",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-62",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-63",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-64",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php",
+          "request_id": "http-65",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/?page=%5BREDACTED%5D",
+          "request_id": "http-66",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/webservices/rest/docs/rest-services.html",
+          "request_id": "http-67",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/webservices/rest/ws-login.php",
+          "request_id": "http-68",
+          "status": 404
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/webservices/rest/ws-test-connectivity.php",
+          "request_id": "http-69",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/webservices/rest/ws-dns-lookup.php",
+          "request_id": "http-70",
+          "status": 405
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/webservices/soap/docs/soap-services.html",
+          "request_id": "http-71",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/webservices/soap/ws-login.php",
+          "request_id": "http-72",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/webservices/soap/ws-test-connectivity.php",
+          "request_id": "http-73",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/webservices/soap/ws-echo.php",
+          "request_id": "http-74",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-75",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/?page=%5BREDACTED%5D",
+          "request_id": "http-76",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/?page=%5BREDACTED%5D",
+          "request_id": "http-77",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-78",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-79",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-80",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-81",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-82",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-83",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-84",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-85",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-86",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-87",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-88",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-89",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-90",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-91",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-92",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-93",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-94",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-95",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-96",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-97",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-98",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-99",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-100",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-101",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-102",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-103",
+          "status": 302
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:4282/index.php?page=%5BREDACTED%5D",
+          "request_id": "http-104",
+          "status": 302
+        }
+      ]
+    },
+    "http_method_tampering": {
+      "tested": 0,
+      "confirmed": 0,
+      "negative": 0,
+      "inconclusive": 0,
+      "skipped": 1,
+      "reasons": {
+        "no_stable_protected_reference": 1
+      },
+      "details": [
+        {
+          "outcome": "skipped",
+          "reason": "no_stable_protected_reference"
+        }
+      ]
+    },
+    "session_cookie_flags": {
+      "tested": 0,
+      "confirmed": 0,
+      "negative": 0,
+      "inconclusive": 0,
+      "skipped": 1,
+      "reasons": {
+        "no_stable_protected_reference": 1
+      },
+      "details": [
+        {
+          "outcome": "skipped",
+          "reason": "no_stable_protected_reference"
+        }
+      ]
+    },
+    "session_after_logout": {
+      "tested": 0,
+      "confirmed": 0,
+      "negative": 0,
+      "inconclusive": 0,
+      "skipped": 1,
+      "reasons": {
+        "no_stable_protected_reference": 1
+      },
+      "details": [
+        {
+          "outcome": "skipped",
+          "reason": "no_stable_protected_reference"
+        }
+      ]
+    },
+    "open_redirect": {
+      "tested": 8,
+      "confirmed": 0,
+      "negative": 0,
+      "inconclusive": 8,
+      "skipped": 0,
+      "reasons": {
+        "baseline_destination_outside_scope": 8
+      },
+      "details": [
+        {
+          "outcome": "inconclusive",
+          "reason": "baseline_destination_outside_scope",
+          "url": "http://127.0.0.1:4282/?page=%5BREDACTED%5D",
+          "request_id": "http-184",
+          "status": 302
+        },
+        {
+          "outcome": "inconclusive",
+          "reason": "baseline_destination_outside_scope",
+          "url": "http://127.0.0.1:4282/?page=%5BREDACTED%5D",
+          "request_id": "http-185",
+          "status": 302
+        },
+        {
+          "outcome": "inconclusive",
+          "reason": "baseline_destination_outside_scope",
+          "url": "http://127.0.0.1:4282/?page=%5BREDACTED%5D",
+          "request_id": "http-186",
+          "status": 302
+        },
+        {
+          "outcome": "inconclusive",
+          "reason": "baseline_destination_outside_scope",
+          "url": "http://127.0.0.1:4282/?page=%5BREDACTED%5D",
+          "request_id": "http-187",
+          "status": 302
+        },
+        {
+          "outcome": "inconclusive",
+          "reason": "baseline_destination_outside_scope",
+          "url": "http://127.0.0.1:4282/index.php?do=%5BREDACTED%5D&page=%5BREDACTED%5D",
+          "request_id": "http-188",
+          "status": 302
+        },
+        {
+          "outcome": "inconclusive",
+          "reason": "baseline_destination_outside_scope",
+          "url": "http://127.0.0.1:4282/index.php?do=%5BREDACTED%5D&page=%5BREDACTED%5D",
+          "request_id": "http-189",
+          "status": 302
+        },
+        {
+          "outcome": "inconclusive",
+          "reason": "baseline_destination_outside_scope",
+          "url": "http://127.0.0.1:4282/index.php?do=%5BREDACTED%5D&page=%5BREDACTED%5D",
+          "request_id": "http-190",
+          "status": 302
+        },
+        {
+          "outcome": "inconclusive",
+          "reason": "baseline_destination_outside_scope",
+          "url": "http://127.0.0.1:4282/index.php?do=%5BREDACTED%5D&page=%5BREDACTED%5D",
+          "request_id": "http-191",
+          "status": 302
+        }
+      ]
+    }
+  },
+  "findings": [],
+  "errors": [],
+  "warnings": [
+    "Limite de links por página atingido.",
+    "Redirecionamento fora do escopo foi bloqueado.",
+    "Sessão sem recurso protegido estável: controles de autenticação inconclusivos.",
+    "Limite de candidatos a redirect atingido."
+  ],
+  "decisions": [
+    {
+      "source": "ollama",
+      "priority_ids": [],
+      "login_form_id": null,
+      "accepted_by_policy": true
+    },
+    {
+      "source": "ollama",
+      "priority_ids": [
+        "url-a1ea0180267e",
+        "url-a2450109ed1d",
+        "url-376e3ab3dbea",
+        "url-31511ec21947",
+        "url-a65ec07dd234",
+        "url-eb0a15389863",
+        "url-dff11029009c",
+        "url-38c4ab9d7ab8",
+        "url-94e37f0af4f1",
+        "url-eeff0628edbd",
+        "url-6add3288fa94",
+        "url-b4b578663d8e"
+      ],
+      "login_form_id": "form-319c1d5b5cda",
+      "accepted_by_policy": true
+    },
+    {
+      "source": "ollama",
+      "priority_ids": [],
+      "login_form_id": null,
+      "accepted_by_policy": true
+    }
+  ]
+}

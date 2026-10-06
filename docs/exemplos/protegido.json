@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0",
+  "scanner": {
+    "name": "Agentic Security Scanner",
+    "version": "1.0.0"
+  },
+  "target": "http://127.0.0.1:50797/60992f078d",
+  "status": "completed",
+  "started_at": "2026-10-02T18:05:30.168614+00:00",
+  "finished_at": "2026-10-02T18:06:06.837125+00:00",
+  "authentication": "verified",
+  "coverage": {
+    "pages": 8,
+    "discovered_urls": 6,
+    "remaining_queue": 0,
+    "target_requests": 37,
+    "target_bytes": 2502,
+    "depth_skipped": 0,
+    "protected_references": 2,
+    "limits": {
+      "pages": 100,
+      "requests": 600,
+      "depth": 5,
+      "seconds": 300,
+      "bytes_per_response": 1048576
+    },
+    "javascript_executed": false
+  },
+  "ai": {
+    "model": "qwen2.5:3b",
+    "available": true,
+    "calls": 3,
+    "valid_decisions": 3,
+    "tokens": 1276,
+    "mode": "local_ollama"
+  },
+  "checks": {
+    "cpf_exposure": {
+      "tested": 8,
+      "confirmed": 0,
+      "negative": 8,
+      "inconclusive": 0,
+      "skipped": 0,
+      "reasons": {
+        "no_contextual_valid_cpf": 8
+      },
+      "details": [
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:50797/60992f078d",
+          "request_id": "http-1",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:50797/60992f078d/ae3cc2e6",
+          "request_id": "http-2",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:50797/60992f078d/5b2d215b",
+          "request_id": "http-4",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:50797/60992f078d/e628ded7",
+          "request_id": "http-5",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:50797/60992f078d/5b2d215b",
+          "request_id": "http-7",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:50797/60992f078d",
+          "request_id": "http-9",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:50797/60992f078d/5b2d215b",
+          "request_id": "http-10",
+          "status": 200
+        },
+        {
+          "outcome": "negative",
+          "reason": "no_contextual_valid_cpf",
+          "url": "http://127.0.0.1:50797/60992f078d/ae3cc2e6",
+          "request_id": "http-11",
+          "status": 200
+        }
+      ]
+    },
+    "http_method_tampering": {
+      "tested": 2,
+      "confirmed": 0,
+      "negative": 2,
+      "inconclusive": 0,
+      "skipped": 0,
+      "reasons": {
+        "post_did_not_bypass_access_control": 2
+      },
+      "details": [
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:50797/60992f078d/e628ded7",
+          "request_id": "http-13",
+          "status": 200,
+          "probe_ids": [
+            "http-15",
+            "http-16"
+          ],
+          "terminal_statuses": [
+            403,
+            403
+          ],
+          "final_control": "http-17"
+        },
+        {
+          "outcome": "negative",
+          "reason": "post_did_not_bypass_access_control",
+          "url": "http://127.0.0.1:50797/60992f078d/5b2d215b",
+          "request_id": "http-19",
+          "status": 200,
+          "probe_ids": [
+            "http-21",
+            "http-22"
+          ],
+          "terminal_statuses": [
+            401,
+            401
+          ],
+          "final_control": "http-23"
+        }
+      ]
+    },
+    "session_cookie_flags": {
+      "tested": 1,
+      "confirmed": 0,
+      "negative": 1,
+      "inconclusive": 0,
+      "skipped": 0,
+      "reasons": {
+        "applicable_cookie_flags_present": 1
+      },
+      "details": [
+        {
+          "outcome": "negative",
+          "reason": "applicable_cookie_flags_present",
+          "url": "http://127.0.0.1:50797/60992f078d/e628ded7",
+          "request_id": "http-13",
+          "status": 200,
+          "cookie_name": "sid",
+          "secure_required": false
+        }
+      ]
+    },
+    "session_after_logout": {
+      "tested": 1,
+      "confirmed": 0,
+      "negative": 1,
+      "inconclusive": 0,
+      "skipped": 0,
+      "reasons": {
+        "old_session_rejected_after_logout": 1
+      },
+      "details": [
+        {
+          "outcome": "negative",
+          "reason": "old_session_rejected_after_logout",
+          "url": "http://127.0.0.1:50797/60992f078d/e628ded7",
+          "request_id": "http-13",
+          "status": 200,
+          "logout_request": "http-33",
+          "probe_ids": [
+            "http-36",
+            "http-37"
+          ],
+          "terminal_statuses": [
+            403,
+            403
+          ]
+        }
+      ]
+    },
+    "open_redirect": {
+      "tested": 1,
+      "confirmed": 0,
+      "negative": 0,
+      "inconclusive": 1,
+      "skipped": 0,
+      "reasons": {
+        "external_redirect_not_reproduced": 1
+      },
+      "details": [
+        {
+          "outcome": "inconclusive",
+          "reason": "external_redirect_not_reproduced",
+          "url": "http://127.0.0.1:50797/60992f078d/5899700e?next=%5BREDACTED%5D",
+          "request_id": "http-28",
+          "status": 302
+        }
+      ]
+    }
+  },
+  "findings": [],
+  "errors": [],
+  "warnings": [],
+  "decisions": [
+    {
+      "source": "ollama",
+      "priority_ids": [],
+      "login_form_id": null,
+      "accepted_by_policy": true
+    },
+    {
+      "source": "ollama",
+      "priority_ids": [
+        "url-5df6a5d36340",
+        "url-e46ccd1875ce",
+        "url-0cfb26429b44"
+      ],
+      "login_form_id": "form-98ab44e893d2",
+      "accepted_by_policy": true
+    },
+    {
+      "source": "ollama",
+      "priority_ids": [],
+      "login_form_id": null,
+      "accepted_by_policy": true
+    }
+  ]
+}
